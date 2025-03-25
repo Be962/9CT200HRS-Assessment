@@ -13,7 +13,6 @@ The robot must be able to sense and avoid the wrong coloured blocks and sense an
 - Detect the colour of an object
 - Transport an object
 - Drive forwards until an object is detected
-- 
 
 ## Functional and Non-Functional requirements
 
