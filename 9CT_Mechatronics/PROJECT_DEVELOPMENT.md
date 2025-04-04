@@ -50,3 +50,9 @@ Example 3:
 |Robot encounters the first object|Ultrasonic sensor detects<br> the first object |The robot will detect, then <br> move the object|
 |Robot is pushing the first block <br> and encounters the second|Ultrasonic sensor detects the <br> next block where it should be|The robot will start pushing <br> the next block as well|
 |Robot is pushing the first and <br> second block, encounters the third|Ultrasonic detects the block|The robot navigates around the <br> block towards the start/finish line|
+
+## Non-functional requirements:
+
+1. Efficiency - The robot should not make any unnecessary movements or actions
+2. Response time - The robot should be reasonably fast with minimal pausing
+3. Accuracy - The robot should precisely execute its commands.
