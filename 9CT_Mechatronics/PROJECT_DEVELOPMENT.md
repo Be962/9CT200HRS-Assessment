@@ -55,4 +55,4 @@ Example 3:
 
 1. Efficiency - The robot should not make any unnecessary movements or actions
 2. Response time - The robot should be reasonably fast with minimal pausing
-3. Accuracy - The robot should precisely execute its commands.
+3. Accuracy - The robot should precisely execute its commands
