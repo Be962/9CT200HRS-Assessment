@@ -7,7 +7,6 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from pybricks.ev3devices import Motor, UltrasonicSensor
-from ev3dev2.light import Light, Color
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
@@ -19,8 +18,9 @@ ev3 = EV3Brick()
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
 
-colour = ColorSensor(Port.S3)
-cs = ColorSensor(Port.S3)
+line_sensor = ColorSensor(Port.S4)
+obstacle_sensor = UltrasonicSensor(Port.S3)
+
 
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
@@ -31,50 +31,29 @@ threshold = (BLACK + WHITE) / 2
 DRIVE_SPEED = 100
 
 PROPORTIONAL_GAIN = 1.2
-
-obstacle_sensor = UltrasonicSensor(Port.S4)
-
-color_value = cs.Color
-
-colourNotDetected = False
-# Write your program here.
-
-
-
-
-
-def turn():
-    colourNotDetected = False
-    ev3.speaker.beep()
-    robot.turn(-90)
-    while colourNotDetected == False:
-        ev3.speaker.beep()
-        colour.reflection()
-        return
-        robot.drive(DRIVE_SPEED, 0)
-        if colour == BLACK:
-            colourNotDetected = True
-        else:
-            colourNotDetected = False
-    robot.turn(-90)
+colourDetected = False
 
 def followLine():
     ev3.speaker.beep()
     deviation = line_sensor.reflection() - threshold
-
     turn_rate = PROPORTIONAL_GAIN * deviation
-    while obstacle_sensor.distance() > 300:
-        wait(10)
-
-
-
+    while obstacle_sensor.distance() > 50:
         robot.drive(DRIVE_SPEED, turn_rate)
+        wait(10)
+    ev3.speaker.beep()
+
+
+def turn():
+    ev3.speaker.beep()
+    colourDetected = False
+    robot.turn(90)
+    ev3.speaker.beep()
+    robot.straight(1000)
+    ev3.speaker.beep()
+    robot.turn(90)
+    ev3.speaker.beep()
 
 def main():
-    while True:
-        if color_value == Color.BLACK:
-            ev3.robot.beep()
-
-
+    followLine()
 
 main()

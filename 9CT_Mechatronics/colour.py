@@ -28,7 +28,8 @@ def followLine():
     ev3.robot.beep()
     deviation = line_sensor.reflection() - threshold
     turn_rate = PROPORTIONAL_GAIN * deviation
-    while obstacle_sensor.distance > 10:
+    #while obstacle_sensor.distance > 10:
+    while True:
         robot.drive(DRIVE_SPEED, turn_rate)
         wait(10)
     robot.ev3.beep()
@@ -36,4 +37,6 @@ def followLine():
 def turn():
     ev3.robot.beep()
     colourDetected == False
-    if line_sensor.
+
+
+followLine()
