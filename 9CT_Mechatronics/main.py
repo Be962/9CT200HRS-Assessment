@@ -40,6 +40,7 @@ def followLine():
     while obstacle_sensor.distance() > 130:
         robot.drive(DRIVE_SPEED, turn_rate)
         wait(10)
+    robot.straight(100)
     ev3.speaker.beep()
 
 
@@ -56,4 +57,5 @@ def main():
     followLine()
     turn()
     followLine()
+
 main()
