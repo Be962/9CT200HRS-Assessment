@@ -10,46 +10,47 @@ The robot must be able to sense and avoid the wrong coloured blocks and sense an
 
 ## Key Actions:
 
-- **Detect** the correct object
-- **Transport** the object back to the start space
-- **Drive** around until an object is detected
+- **Drive** along a line
+- **Detect** the objects and to progress the code
+- **Transport** the objects back to the start space
 
 ## Functional Requirements:
 
 
-- **Colour detection:** Detect the object and determine if it is the correct block to be transported.
-- **Block transportation:** Once the block has been recognized, push it back to the starting area.
-- **Drive to destination:** The robot must be able to drive around obstacles, to the correct place.
+- **Colour detection:** Detect the line and drive along it to a block.
+- **Block transportation:** push the block back to the starting area.
+- **Drive to destination:** The robot must be able to detect blocks in front of it.
 
 ## Use Cases:  
 
 <br>
 
 Example 1: 
+
+- **Scenario:** The robot is returning home and encounters an obstacle.
+- **Input:** The colour sensor detects the line.
+- **Action:** The robot knows to navigate along the line.
+- **Expected Outcome** The robot navigates around the course, following the line.
+
+Example 2:
+
 - **Scenario:** The robot is driving a path and detects an object.
 - **Input:** The ultrasonic sensor detects the object where it should be.
 - **Action:** The robot starts pushing the block.
 - **Expected Outcome:** The robot will detect, then move the block.
 
-Example 2:
+Example 3:
 
 - **Scenario:** The robot is pushing the first block when it encounters another block.
 - **Input:** The ultrasonic sensor detects another block where it should be.
 - **Action:** The robot collects the other block.
 - **Expected Outcome:** The robot detects and collects the second block
 
-Example 3:
-
-- **Scenario:** The robot is returning home and encounters an obstacle.
-- **Input:** The ultrasonic sensor detects another block.
-- **Action:** The robot knows the third object is an obstacle, and navigates around it.
-- **Expected Outcome** The robot navigates around the obstacle, returning to the start area.
-
 | Test Case | Input     | Expected Output   |
 |---------- |---------- |----------------   |
+|Robot detects the line |Colour sensor detects the line|The robot drives along the <br> line towards the start/finish line|
 |Robot encounters the first object|Ultrasonic sensor detects<br> the first object |The robot will detect, then <br> move the object|
 |Robot is pushing the first block <br> and encounters the second|Ultrasonic sensor detects the <br> next block where it should be|The robot will start pushing <br> the next block as well|
-|Robot is pushing the first and <br> second block, encounters the third|Ultrasonic detects the block|The robot navigates around the <br> block towards the start/finish line|
 
 ## Non-functional requirements:
 
