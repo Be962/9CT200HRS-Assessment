@@ -30,6 +30,9 @@ threshold = (BLACK + WHITE) / 2
 
 DRIVE_SPEED = 100
 
+counterOn = True
+count = 0
+
 PROPORTIONAL_GAIN = 1.2
 colourDetected = False
 
@@ -38,10 +41,18 @@ def followLine():
     deviation = line_sensor.reflection() - threshold
     turn_rate = PROPORTIONAL_GAIN * deviation
     while obstacle_sensor.distance() > 130:
-        robot.drive(DRIVE_SPEED, turn_rate)
-        wait(10)
+        if counterOn == True:
+            robot.drive(DRIVE_SPEED, turn_rate)
+            wait(10)
+            count = count + 1
+        else if counterOn == False:
+            while count >= 0
+                robot.drive(DRIVE_SPEED, turn_rate)
+                wait(10)
+                count = count - 1
     robot.straight(100)
     ev3.speaker.beep()
+    counterOn = False
 
 
 def turn():
