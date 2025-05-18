@@ -7,7 +7,7 @@
 ## Purpose:
 
 I need to design a program to allow an EV3 Lego Mindstorms robot to transport specific Lego Bricks.  
-The robot must use atleast two different sensors and all additional lego must be removable each lesson.  
+The robot must use at least two different sensors and all additional lego must be removable each lesson.  
 The robot must be able to sense and avoid the wrong coloured blocks and sense and collect the right coloured blocks.  
 
 ## Key Actions:
@@ -101,7 +101,7 @@ END
 ```
 # Testing and debugging (code)
 
-##### Small note/explanation, in the last (3 period) week our project (Mine and Maxi's) was heavily impacted by technical issues, our robot (number 2) was broken, and Mr Groom needed to fix it, he tried 'zapping' the sd card which would not be finished all week. Next we tried all of the other robots, of which also would not work. So finally we had to share with the other groups, which gave us much less time to test and debug leaving us in a scramble and putting strain on the other groups work. Additionally, I tried to get time to catch up on Thursday lunch. On Wednesday I asked the TAS staffroom if we could get supervision for Thursday lunch (as sport cuts out Wednesday lunch). Ms Cartland originally said yes, but later declined as it would be unfair for the other groups, and she had a meeting. I tried these options to catch up however it did not work out. This is why some of the iterations are not great improvements, or may be missing, and there is not a great deal of testing. Additionally Mr Groom said we would discuss the technical issues on Monday (day of submission). Mr Groom and the sub we had on Tuesday, as well as other project groups will confirm this.
+##### Small note/explanation, in the last (3 period) week our project (Mine and Maxi's) was heavily impacted by technical issues, our robot (number 2) was broken, and Mr Groom needed to fix it, he tried 'zapping' the sd card which would not be finished all week. Next we tried all of the other robots, of which also would not work. So finally we had to share with the other groups, which gave us much less time to test and debug leaving us in a scramble, and putting strain on the other groups' work. Additionally, I tried to get time to catch up on Thursday lunch. On Wednesday I asked the TAS staffroom if we could get supervision for Thursday lunch (as sport cuts out Wednesday lunch). Ms Cartland originally said yes, but later declined as it would be unfair for the other groups, and she had a meeting. I tried these options to catch up however it did not work out. This is why some of the iterations are not great improvements, or may be missing, and there is not a great deal of testing. Additionally Mr Groom said we would discuss the technical issues on Monday (day of submission). Mr Groom and the sub we had on Tuesday, as well as other project groups will confirm this.
 
 ### These modules don't change much throughout the tests:
   ```
@@ -194,7 +194,7 @@ def followLine():
 
 ### Evaluation:
 
-#### This program meets the criteria in that it will detect and follow the line for a distance. Some errors I had were in getting the program to actually start, as well as knowing how far into the code the program got before stopping. I fixed this with the addition of the beeps which helped the debugging process. Another issue was figuring out what value to put the obstacle sensor so that it would detect the block and not the lego, this was fixed by both moving the lego and adjusting the value. The obstacle sensor reliably detects objects, however the actual follow the line sometimes didnt work, and it was not clear if this was a motor or a code issue. The reliability could definitely be improved with more testing and debugging.
+#### This program meets the criteria in that it will detect and follow the line for a distance. Some errors I had were in getting the program to actually start, as well as knowing how far into the code the program got before stopping. I fixed this with the addition of the beeps which helped the debugging process. Another issue was figuring out what value to put the obstacle sensor so that it would detect the block and not the lego, this was fixed by both moving the lego and adjusting the value. The obstacle sensor reliably detects objects, however the actual follow the line sometimes didn't work, and it was not clear if this was a motor or a code issue. The reliability could definitely be improved with more testing and debugging.
 
 ## Test case 2:
 
@@ -372,7 +372,7 @@ def turn():
 
 ### 3
 
-#### All of Maxi's individual components worked, however the integrated program fell short due to time constraints.
+#### All of Maxi's individual components worked, however the integrated program fell short due to time constraints affecting testing/debugging.
 
 ### When rating 1-5 with 1 being not well at all and 5 being exceptionally well, how well do you think this team member performed throughout all stages of the project?
 
