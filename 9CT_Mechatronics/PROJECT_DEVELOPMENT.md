@@ -84,11 +84,11 @@ END
 #### Pseudocode 2:
 ```
 BEGIN followLine
-WHILE obstacle_sensor.distance() > 130
-READ distance:
-Drive forwards, turn on black
-ENDWHILE
-Drive forwards 100mm.
+	WHILE obstacle_sensor.distance() > 130
+		READ distance:
+		Drive forwards, turn on black
+	ENDWHILE
+	Drive forwards 100mm.
 END
 ```
 #### Pseudocode 3:
@@ -272,7 +272,7 @@ def turn():
     ev3.speaker.beep()
 ```
 
-### Third iteration: (polishing the values with real measurements in them.
+### Third iteration: polishing the values with real measurements in them.
 
 ```
 def followLine():
