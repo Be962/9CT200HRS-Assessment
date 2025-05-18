@@ -27,31 +27,31 @@ The robot must be able to sense and avoid the wrong coloured blocks and sense an
 
 <br>
 
-Example 1: 
+Use case 1: 
 
 - **Scenario:** The robot is returning home and encounters an obstacle.
 - **Input:** The colour sensor detects the line.
 - **Action:** The robot knows to navigate along the line.
 - **Expected Outcome** The robot navigates around the course, following the line.
 
-Example 2:
+Use case 2:
 
 - **Scenario:** The robot is driving a path and detects an object.
-- **Input:** The ultrasonic sensor detects the object where it should be.
+- **Input:** The ultrasonic sensor detects the object.
 - **Action:** The robot starts pushing the block.
 - **Expected Outcome:** The robot will detect, then move the block.
 
-Example 3:
+Use case 3:
 
-- **Scenario:** The robot is pushing the first block when it encounters another block.
+- **Scenario:** Robot is pushing the first block <br> and encounters the second along the way to another black line.
 - **Input:** The ultrasonic sensor detects another block where it should be.
 - **Action:** The robot collects the other block.
 - **Expected Outcome:** The robot detects and collects the second block
 
 | Test Case | Input     | Expected Output   |
 |---------- |---------- |----------------   |
-|Robot detects the line |Colour sensor detects the line|The robot drives along the <br> line towards the start/finish line|
-|Robot encounters the first object|Ultrasonic sensor detects<br> the first object |The robot will detect, then <br> move the object|
+|The robot is returning home and encounters an obstacle|Colour sensor detects the line|The robot drives along the <br> line towards the start/finish line|
+|The robot is driving a path and detects an object.|Ultrasonic sensor detects<br> the first object |The robot will detect, then <br> move the object|
 |Robot is pushing the first block <br> and encounters the second along the way to another <br> black line|Colour sensor detects the <br> next line |The robot will stop at the line|
 
 ## Non-functional requirements:
