@@ -1,4 +1,7 @@
 #!/usr/bin/env pybricks-micropython
+
+# Importing modules for the ev3
+
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (TouchSensor, ColorSensor,
                                  InfraredSensor, GyroSensor)
@@ -8,61 +11,45 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from pybricks.ev3devices import Motor, UltrasonicSensor
 
-# This program requires LEGO EV3 MicroPython v2.0 or higher.
-# Click "Open user guide" on the EV3 extension tab for more information.
+# Reassigning and setting up variables:
 
-
-# Create your objects here.
 ev3 = EV3Brick()
+robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
+DRIVE_SPEED = 100
 
-line_sensor = ColorSensor(Port.S4)
 obstacle_sensor = UltrasonicSensor(Port.S3)
 
+# Setting up the colour sensor:
 
-robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
-
+line_sensor = ColorSensor(Port.S4)
 BLACK = 9
 WHITE = 85
 threshold = (BLACK + WHITE) / 2
-
-DRIVE_SPEED = 100
-
-counterOn = True
-count = 0
-
 PROPORTIONAL_GAIN = 1.2
-colourDetected = False
+
+
+# The followLine function makes the robot follow the black line around the arena, until it sees a block. After it sees the block,
+# it will close the distance. Because of the arena set up, the first block will always be yellow.
 
 def followLine():
-    ev3.speaker.beep()
     deviation = line_sensor.reflection() - threshold
     turn_rate = PROPORTIONAL_GAIN * deviation
     while obstacle_sensor.distance() > 130:
-        if counterOn == True:
-            robot.drive(DRIVE_SPEED, turn_rate)
-            wait(10)
-            count = count + 1
-        else if counterOn == False:
-            while count >= 0
-                robot.drive(DRIVE_SPEED, turn_rate)
-                wait(10)
-                count = count - 1
+      robot.drive(DRIVE_SPEED, turn_rate)
+      wait(10)
     robot.straight(100)
-    ev3.speaker.beep()
-    counterOn = False
 
+# The turn function is hardcoded. The purpose of this is to move across and collect the red block.
 
 def turn():
-    ev3.speaker.beep()
     robot.turn(-90)
-    ev3.speaker.beep()
     robot.straight(435)
-    ev3.speaker.beep()
     robot.turn(-90)
-    ev3.speaker.beep()
+
+# The main function sequences the subroutines, putting them in order and organising them.
 
 def main():
     followLine()
