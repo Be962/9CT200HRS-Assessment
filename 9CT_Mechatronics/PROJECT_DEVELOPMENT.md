@@ -380,3 +380,31 @@ def turn():
 
 #### Maxi performed well throughout the project. This included the build up through the research task to the lego construction. However the final task caused him trouble when significantly less time was available than originally thought. This was caused by lack of cables and broken robots at times.
 
+
+## Project Evaluation
+
+##### Once again note significant technical difficulties :(
+
+### Evaluate your INDIVIDUAL Final Test in Relation to Functional Criteria
+
+#### The final test does not accomplish the functional criteria cohesively. In theory the code works however there was not enough testing and debugging. If the program was tested and debugged more, it would likely work as the idea is sound. Individually each of the functions works in isolation, the line is detected and the ultrasonic sensor works properly, however the final test lacked integration. Because of this, it immediately fell apart, however I theorise that the right motor was slightly broken because in the test it was not spinning nearly as fast as it should. It is not unlikely that without that hitch, and some values adjusting that the program would work flawlessly.
+
+### Evaluate your INDIVIDUAL Final Test in Relation to Non-Functional Criteria
+
+#### The final test does not accomplish the non-functional criteria. There was simply not enough in the test to judge it by. However the program itself is lightweight, efficient, and would be accurate with correctly tested values inputted into it. Additionally, the robot has little to no pausing which is specified by the non-functional requirements. The robot does not accomplish individual criteria in the final test, however the program does meet the criteria.
+
+### Evaluate your GROUP'S Final Performance in Relation to the Identified Need
+
+#### The group did not perform well in relation to the identified need. In the end, the robot did not accomplish anything in the final test. It spun around in a backwards circle. The program would have solved the identified need, as it clearly layed out steps for collecting each of the blocks, and returning back to the start.
+
+### Evaluate your Project in Relation to Project Management
+
+#### The project was originally managed well, however it got derailed by repeat unavoidable technical issues such as a broken sd card, and other robots being broken. Additionally the lack of cables strained the time. However in general the early parts of the project went according to plan, especially before the robot coding was started.
+
+### Evaluate your Project in Relation to Team Collaboration
+
+#### The project was a great product of team collaboration. We repeatedly helped each other out in things such as debugging, testing, and even moral support. More specifically the various parts of the project were assigned evenly and fairly, E.g the research task in the very beginning, and also the construction of the robots.
+
+### Justify Future Improvements you could make to your Final Product
+
+#### In the future I would try to make the final product more simple. In particular I would hard code more of it, as some parts of the robots are unreliable at best. For example the touch sensor can be unreliable especially with touching blocks. Additionally I would completely ignore some of the sensors like the gyro and touch sensor in the practice part, instead focusing on the useful parts, to hopefully improve the final products integration of the main sensors. Finally, in the future I would have tried to emphasise the testing rather than the programming, as it was clear the testing is the most lacking part in the project.
